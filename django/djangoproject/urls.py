@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from backend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('paintings/', views.random, name='random'),
+    path('paintings/<str:artist>/<int:offset>', views.artist, name='artist'),
+    path('paintme/<str:style_img>/<str:content_img>', views.paintme, name='paintme')
 ]
+
