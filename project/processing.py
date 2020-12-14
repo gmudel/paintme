@@ -1,5 +1,6 @@
 import torch
 import torchvision.transforms as transforms
+import torchvision.models as models
 
 import PIL
 import matplotlib.pyplot as plt
@@ -13,6 +14,11 @@ NORMAL_STD = [1., 1., 1.]
 
 # Does mobilenet/resnet_18 allow for different sizes?
 NN_IMPUT_SIZE = 224
+
+feature_extractor = models.mobilenet_v2(pretrained=True).features
+
+# This may be problematic 
+feature_extractor.type(torch.cuda.FloatTensor)
 
 def preprocess(img):
     transform = transforms.Compose([
@@ -38,6 +44,17 @@ def rescale(x):
     x_rescaled = (x - low) / (high - low)
     return x_rescaled
 
+def extract_features(minibatch):
+    features = []
+    prev_output = minibatch
+    for module in feature_extractor._modules.values():
+        output = module(prev_output)
+        features.append(output)
+        prev_output = output
+    return features
+
+'''
+basic test
 
 img = PIL.Image.open("django/static/vincentvangogh/Vincent_van_Gogh_99.jpg")
 img_preprocessed = preprocess(img)
@@ -49,3 +66,4 @@ plt.figure()
 plt.imshow(img_deprocessed)
 
 plt.show()
+'''
