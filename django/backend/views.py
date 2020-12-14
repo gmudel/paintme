@@ -7,8 +7,7 @@ import os
 from random import sample
 import base64
 
-def get_encoded_img(filename):
-    filepath = os.path.join(path, filename)
+def get_encoded_img(filepath):
     with open(filepath, mode='rb') as img_file:
         img = img_file.read()
         return base64.encodebytes(img).decode('utf-8')
@@ -23,7 +22,8 @@ def random(request):
 
     filenames = sample(os.listdir(path), 10)
     for filename in filenames:
-        encoded_img = get_encoded_img(filename)
+        filepath = os.path.join(path, filename)
+        encoded_img = get_encoded_img(path, filename)
         resp['imgs'].append(encoded_img)
 
     data = json.dumps(resp)
@@ -42,6 +42,7 @@ def artist(request, artist, offset):
     selected_filenames = all_filenames[startrange:endrange]
 
     for filename in selected_filenames:
+        filepath = os.path.join(path, filename)
         encoded_img = get_encoded_img(filename)
         resp['imgs'].append(encoded_img)
     data = json.dumps(resp)
