@@ -23,7 +23,7 @@ def random(request):
     filenames = sample(os.listdir(path), 10)
     for filename in filenames:
         filepath = os.path.join(path, filename)
-        encoded_img = get_encoded_img(path, filename)
+        encoded_img = get_encoded_img(filepath)
         resp['imgs'].append(encoded_img)
 
     data = json.dumps(resp)
@@ -43,7 +43,7 @@ def artist(request, artist, offset):
 
     for filename in selected_filenames:
         filepath = os.path.join(path, filename)
-        encoded_img = get_encoded_img(filename)
+        encoded_img = get_encoded_img(filepath)
         resp['imgs'].append(encoded_img)
     data = json.dumps(resp)
     return HttpResponse(data, content_type='application/json')
