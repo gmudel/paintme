@@ -124,11 +124,11 @@ params = {
     'content_size' : min(content_img.size),
     'style_size' : min(style_img.size),
     'content_layer' : 3,
-    'content_weight' : 1e0, 
-    'style_layers' : (1, 6, 11, 20, 29),
-    'style_weights' : (1e4, 1e2, 1e1, 1e0, 1e-1),
+    'content_weight' : 5e-2, 
+    'style_layers' : (1, 4, 6, 7),
+    'style_weights' : (2e4, 5e2, 1e1, 1e0),
     'tv_weight' : 5e-2,
-    'num_iters' : 500
+    'num_iters' : 200
 }
 
 '''
@@ -158,51 +158,4 @@ print(content_img,style_img)
 
 
 
-#style_transfer(**params)
-
-import tensorflow as tf
-import tensorflow_hub as hub
-import numpy as np
-
-def load_img(path_to_img):
-  max_dim = 512
-  img = tf.io.read_file(path_to_img)
-  img = tf.image.decode_image(img, channels=3)
-  img = tf.image.convert_image_dtype(img, tf.float32)
-
-  shape = tf.cast(tf.shape(img)[:-1], tf.float32)
-  long_dim = max(shape)
-  scale = max_dim / long_dim
-
-  new_shape = tf.cast(shape * scale, tf.int32)
-
-  img = tf.image.resize(img, new_shape)
-  img = img[tf.newaxis, :]
-  return img
-
-def imshow(image, title=None):
-  if len(image.shape) > 3:
-    image = tf.squeeze(image, axis=0)
-
-  plt.imshow(image)
-  if title:
-    plt.title(title)
-
-def tensor_to_image(tensor):
-  tensor = tensor*255
-  tensor = np.array(tensor, dtype=np.uint8)
-  if np.ndim(tensor)>3:
-    assert tensor.shape[0] == 1
-    tensor = tensor[0]
-  return PIL.Image.fromarray(tensor)
-
-hub_model = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
-print('loaded style transfer model')
-
-content_image = load_img(content_img_path)
-style_image = load_img(style_img_path)
-stylized_image = hub_model(content_image, style_image)[0]
-
-plt.figure()
-plt.imshow(tensor_to_image(stylized_image))
-plt.show()
+style_transfer(**params)
