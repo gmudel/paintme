@@ -15,27 +15,30 @@ class paintMeVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.allowsEditing = true
-        pickerController.sourceType = .camera
     }
     
     @IBAction func cameraClicked(_ sender: Any) {
+        /*
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
-        present(imagePicker, animated: true)
+        present(imagePicker, animated: true, completion: nil)
+ */
+        let stylepicker = storyboard!.instantiateViewController(withIdentifier: "paintingTableVC") as! paintingTableVC
+        self.present(stylepicker, animated: false, completion: nil)
     }
     
     @IBAction func photosClicked(_ sender: Any) {
+        /*
         let photoPicker = UIImagePickerController()
         photoPicker.sourceType = .photoLibrary
         photoPicker.allowsEditing = true
         photoPicker.delegate = self
-        present(photoPicker, animated: true)
+        present(photoPicker, animated: true, completion: nil)
+ */
+        let stylepicker = storyboard!.instantiateViewController(withIdentifier: "paintingTableVC") as! paintingTableVC
+        self.present(stylepicker, animated: false, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -48,6 +51,9 @@ class paintMeVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
 
         // print out the image size as a test
         print(image.size)
+        
+        let stylepicker = paintingTableVC()
+        self.present(stylepicker, animated: false, completion: nil)
     }
     
 

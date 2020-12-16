@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		605BC1EAE9E6FF0264F0236B /* Pods_paintme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F96DC5B6CAE1E6DC40ED10 /* Pods_paintme.framework */; };
 		A52264EC2586ADE000C801CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52264EB2586ADE000C801CA /* AppDelegate.swift */; };
 		A52264EE2586ADE000C801CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52264ED2586ADE000C801CA /* SceneDelegate.swift */; };
 		A52264F32586ADE000C801CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52264F12586ADE000C801CA /* Main.storyboard */; };
 		A52264F52586ADE300C801CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52264F42586ADE300C801CA /* Assets.xcassets */; };
 		A52264F82586ADE300C801CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52264F62586ADE300C801CA /* LaunchScreen.storyboard */; };
 		A52265022586B23100C801CA /* paintMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52265012586B23100C801CA /* paintMeVC.swift */; };
+		A522650625880BC000C801CA /* paintingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522650525880BC000C801CA /* paintingCell.swift */; };
+		A522650925880C2000C801CA /* paintingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522650825880C2000C801CA /* paintingTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71F96DC5B6CAE1E6DC40ED10 /* Pods_paintme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paintme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86EAD9F2B75ED8DD63C9E346 /* Pods-paintme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paintme.debug.xcconfig"; path = "Target Support Files/Pods-paintme/Pods-paintme.debug.xcconfig"; sourceTree = "<group>"; };
 		A52264E82586ADE000C801CA /* paintme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paintme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52264EB2586ADE000C801CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A52264ED2586ADE000C801CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		A52264F72586ADE300C801CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A52264F92586ADE300C801CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A52265012586B23100C801CA /* paintMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paintMeVC.swift; sourceTree = "<group>"; };
+		A522650525880BC000C801CA /* paintingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paintingCell.swift; sourceTree = "<group>"; };
+		A522650825880C2000C801CA /* paintingTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paintingTableVC.swift; sourceTree = "<group>"; };
+		FF47F53664381D42FB7A9918 /* Pods-paintme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paintme.release.xcconfig"; path = "Target Support Files/Pods-paintme/Pods-paintme.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,18 +39,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605BC1EAE9E6FF0264F0236B /* Pods_paintme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		497F30E4C846CA5BF6A51FD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86EAD9F2B75ED8DD63C9E346 /* Pods-paintme.debug.xcconfig */,
+				FF47F53664381D42FB7A9918 /* Pods-paintme.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A52264DF2586ADE000C801CA = {
 			isa = PBXGroup;
 			children = (
+				A522650825880C2000C801CA /* paintingTableVC.swift */,
+				A522650525880BC000C801CA /* paintingCell.swift */,
 				A52265012586B23100C801CA /* paintMeVC.swift */,
 				A52264EA2586ADE000C801CA /* paintme */,
 				A52264E92586ADE000C801CA /* Products */,
+				497F30E4C846CA5BF6A51FD8 /* Pods */,
+				C11B2D19B49EB926EC2A2C85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +90,14 @@
 			path = paintme;
 			sourceTree = "<group>";
 		};
+		C11B2D19B49EB926EC2A2C85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71F96DC5B6CAE1E6DC40ED10 /* Pods_paintme.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A52264FC2586ADE300C801CA /* Build configuration list for PBXNativeTarget "paintme" */;
 			buildPhases = (
+				D9230E747810C5AC67E52D7D /* [CP] Check Pods Manifest.lock */,
 				A52264E42586ADE000C801CA /* Sources */,
 				A52264E52586ADE000C801CA /* Frameworks */,
 				A52264E62586ADE000C801CA /* Resources */,
+				3ADDE259D2F4343FB903A1AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +165,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3ADDE259D2F4343FB903A1AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-paintme/Pods-paintme-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-paintme/Pods-paintme-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-paintme/Pods-paintme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9230E747810C5AC67E52D7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-paintme-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A52264E42586ADE000C801CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +215,8 @@
 				A52264EC2586ADE000C801CA /* AppDelegate.swift in Sources */,
 				A52265022586B23100C801CA /* paintMeVC.swift in Sources */,
 				A52264EE2586ADE000C801CA /* SceneDelegate.swift in Sources */,
+				A522650925880C2000C801CA /* paintingTableVC.swift in Sources */,
+				A522650625880BC000C801CA /* paintingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +360,7 @@
 		};
 		A52264FD2586ADE300C801CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86EAD9F2B75ED8DD63C9E346 /* Pods-paintme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +381,7 @@
 		};
 		A52264FE2586ADE300C801CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF47F53664381D42FB7A9918 /* Pods-paintme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
