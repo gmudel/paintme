@@ -15,16 +15,23 @@ NORMAL_STD = [1., 1., 1.]
 # Does mobilenet/resnet_18 allow for different sizes?
 NN_IMPUT_SIZE = 224
 
-feature_extractor = models.mobilenet_v2(pretrained=True).features
+feature_extractor = models.vgg19(pretrained=True).features
+#feature_extractor = models.mobilenet_v2(pretrained=True).features
+#feature_extractor = models.squeezenet1_1(pretrained=True).features
+for param in feature_extractor:
+    param.requires_grad = False
+
+#print(feature_extractor)
 
 # This may be problematic 
-feature_extractor.type(torch.cuda.FloatTensor)
+#feature_extractor.type(torch.cuda.FloatTensor)
 
 def preprocess(img):
     transform = transforms.Compose([
         transforms.Resize([NN_IMPUT_SIZE, NN_IMPUT_SIZE]),
         transforms.ToTensor(),
         transforms.Normalize(mean=TORCH_MEAN, std=TORCH_STD),
+        transforms.Lambda(lambda x: x[None]),
     ])
     return transform(img)
 
@@ -32,6 +39,7 @@ def deprocess(img):
     neg_mean = [-x for x in TORCH_MEAN]
     inv_std = [1/x for x in TORCH_STD]
     transform = transforms.Compose([
+        transforms.Lambda(lambda x: x[0]),
         transforms.Normalize(mean=[0, 0, 0], std=(inv_std)),
         transforms.Normalize(mean=(neg_mean), std=[1, 1, 1]),
         transforms.Lambda(rescale),
