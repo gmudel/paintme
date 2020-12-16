@@ -117,21 +117,21 @@ content_img = PIL.Image.open(content_img_path)
 style_img = PIL.Image.open(style_img_path)
 print(min(content_img.size))
 
-'''
+
 params = {
     'content_img_path' : content_img_path,
     'style_img_path' : style_img_path,
     'content_size' : min(content_img.size),
     'style_size' : min(style_img.size),
     'content_layer' : 3,
-    'content_weight' : 5e-2, 
-    'style_layers' : (5, 8, 10, 12),
-    'style_weights' : (20000, 500, 12, 1),
+    'content_weight' : 1e0, 
+    'style_layers' : (1, 6, 11, 20, 29),
+    'style_weights' : (1e4, 1e2, 1e1, 1e0, 1e-1),
     'tv_weight' : 5e-2,
     'num_iters' : 500
 }
-'''
 
+'''
 params = {
     'content_img_path' : content_img_path,
     'style_img_path' : style_img_path,
@@ -144,7 +144,7 @@ params = {
     'tv_weight' : 5e-2,
     'num_iters' : 500
 }
-
+'''
 
 #100 is good
 #368 is starry night
@@ -201,7 +201,7 @@ print('loaded style transfer model')
 
 content_image = load_img(content_img_path)
 style_image = load_img(style_img_path)
-stylized_image = hub_model(tf.constant(content_image), tf.constant(style_image))[0]
+stylized_image = hub_model(content_image, style_image)[0]
 
 plt.figure()
 plt.imshow(tensor_to_image(stylized_image))

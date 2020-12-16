@@ -1,16 +1,15 @@
 from djangoproject import settings
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotAllowed
+from django.views.decorators.csrf import csrf_exempt
 import json
 import requests
 import os
 from random import sample
 import base64
 
-def get_encoded_img(filepath):
-    with open(filepath, mode='rb') as img_file:
-        img = img_file.read()
-        return base64.encodebytes(img).decode('utf-8')
+from .apps import BackendConfig
+from .processing import *
 
 # returns 10 random images from the pool of style images
 def random(request):
@@ -48,5 +47,25 @@ def artist(request, artist, offset):
     data = json.dumps(resp)
     return HttpResponse(data, content_type='application/json')
 
-def paintme(request, style_img, content_img):
-    return
+@csrf_exempt
+def paintme(request):
+    #if request.method != "GET":
+    #    return HttpResponseNotAllowed(("GET",))
+    
+    #d = base64.decodebytes(recvd)
+
+    body = json.loads(request.body.decode('utf-8'))
+    content_img_bytes = body['content_img']
+    style_img_bytes = body['style_img']
+
+    resp = {'img' : None}
+
+    content_img = load_img(content_img_bytes)
+    style_img = load_img(style_img_bytes)
+
+    painted_img = BackendConfig.model(content_img, style_img)[0]
+    resp['img'] = tensor_to_bytes(painted_img)
+
+    data = json.dumps(resp)
+    return HttpResponse(data, content_type='application/json')
+

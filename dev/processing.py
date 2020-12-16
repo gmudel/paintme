@@ -15,11 +15,13 @@ NORMAL_STD = [1., 1., 1.]
 # Does mobilenet/resnet_18 allow for different sizes?
 NN_IMPUT_SIZE = 224
 
-#feature_extractor = models.vgg19_bn(pretrained=True).features
+feature_extractor = models.vgg19(pretrained=True).features
 #feature_extractor = models.mobilenet_v2(pretrained=True).features
-feature_extractor = models.squeezenet1_1(pretrained=True).features
+#feature_extractor = models.squeezenet1_1(pretrained=True).features
 for param in feature_extractor:
     param.requires_grad = False
+
+#print(feature_extractor)
 
 # This may be problematic 
 #feature_extractor.type(torch.cuda.FloatTensor)
