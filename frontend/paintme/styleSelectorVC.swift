@@ -1,28 +1,26 @@
 //
-//  paintMeVC.swift
+//  styleSelectorVC.swift
 //  paintme
 //
-//  Created by Megan Worrel on 12/13/20.
+//  Created by Megan Worrel on 12/18/20.
 //
 
 import UIKit
 
-class paintMeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class styleSelectorVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var photosButton: UIButton!
-    
-    
+    var image: UIImage!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
     
-    @IBAction func cameraClicked(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+    @IBAction func browseClicked(_ sender: Any) {
+        let paintingsVC = storyboard!.instantiateViewController(withIdentifier: "paintingTableVC") as! paintingTableVC
+        paintingsVC.image = self.image
+        self.navigationController?.pushViewController(paintingsVC, animated: true)
     }
     
     @IBAction func photosClicked(_ sender: Any) {
@@ -36,7 +34,7 @@ class paintMeVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
 
-        guard let image = info[.editedImage] as? UIImage else {
+        guard let editedImage = info[.editedImage] as? UIImage else {
             print("No image found")
             return
         }
@@ -44,12 +42,12 @@ class paintMeVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
         // print out the image size as a test
         print(image.size)
         
-        let stylepicker = storyboard!.instantiateViewController(withIdentifier: "styleSelectorVC") as! styleSelectorVC
-        stylepicker.image = image
-        self.navigationController?.pushViewController(stylepicker, animated: true)
+        let waitingVC = storyboard!.instantiateViewController(withIdentifier: "waitingVC") as! waitingVC
+        waitingVC.inputImage = self.image
+        waitingVC.styleImage = editedImage
+        self.navigationController?.pushViewController(waitingVC, animated: true)
     }
     
-
     /*
     // MARK: - Navigation
 
