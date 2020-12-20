@@ -162,7 +162,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="paintingCell" rowHeight="229" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-5t-a2F" customClass="paintingCell" customModule="paintme" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="paintingCell" rowHeight="229" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-5t-a2F" customClass="paintingCell" customModule="paintme" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="229"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aPY-5t-a2F" id="Ayq-eG-33m">
@@ -255,10 +255,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="watercolour-4117519_1280.png" translatesAutoresizingMaskIntoConstraints="NO" id="04W-Sg-Qh5">
-                                <rect key="frame" x="20" y="155" width="374" height="624"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tM1-e0-Wr2">
                                 <rect key="frame" x="112" y="381" width="191" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,7 +320,6 @@
                         <outlet property="image" destination="jwo-Vl-gEN" id="71F-ZU-eZ5"/>
                         <outlet property="indicator" destination="tM1-e0-Wr2" id="w2a-es-fZ9"/>
                         <outlet property="waitingText" destination="ywg-bJ-m7e" id="toF-s5-OV6"/>
-                        <outlet property="watercolorImage" destination="04W-Sg-Qh5" id="ZyO-pp-FKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcc-iu-EIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -420,7 +415,6 @@
         <image name="teal_line.png" width="1204" height="161"/>
         <image name="watercolour-4116932_1280" width="1280" height="897"/>
         <image name="watercolour-4117017_1280" width="1280" height="898"/>
-        <image name="watercolour-4117519_1280.png" width="1280" height="893"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

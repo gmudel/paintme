@@ -17,7 +17,6 @@ class waitingVC: UIViewController {
     @IBOutlet weak var image: UIImageView!
     var inputImage: UIImage!
     var styleImage: UIImage!
-    @IBOutlet weak var watercolorImage: UIImageView!
     @IBOutlet weak var downloadText: UILabel!
     @IBOutlet weak var downloadButton: UIButton!
     
@@ -80,7 +79,6 @@ class waitingVC: UIViewController {
                     self.indicator.isHidden = true
                     self.finishedText.isHidden = false
                     self.image.isHidden = false
-                    self.watercolorImage.isHidden = true
                     self.downloadText.isHidden = false
                     self.downloadButton.isHidden = false
                 }
