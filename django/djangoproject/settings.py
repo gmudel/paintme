@@ -26,8 +26,8 @@ SECRET_KEY = 'kar3k&8wbc$x)ieo%c!pp)a$%)97@x!qhdcm=hcmylo^tu5rrl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['django-env.eba-zcw9qtrw.us-west-2.elasticbeanstalk.com',
+                'localhost']
 
 # Application definition
 
@@ -81,6 +81,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 9242880
 
 
 # Password validation
