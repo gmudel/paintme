@@ -2,7 +2,7 @@
 //  paintMeVC.swift
 //  paintme
 //
-//  Created by Megan Worrel on 12/13/20.
+//  Created by Megan Worrel and Gabe Mudel on 12/13/20.
 //
 
 import UIKit
@@ -42,7 +42,7 @@ class paintMeVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
         }
 
         // print out the image size as a test
-        print(image.size)
+        //print(image.size)
         
         let stylepicker = storyboard!.instantiateViewController(withIdentifier: "styleSelectorVC") as! styleSelectorVC
         stylepicker.image = image

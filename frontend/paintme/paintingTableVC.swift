@@ -146,7 +146,7 @@ class paintingTableVC: UITableViewController, UISearchBarDelegate, ArtistReturnD
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print(paintings[indexPath.row].size.height)
+        //print(paintings[indexPath.row].size.height)
         return paintings[indexPath.row].size.height
     }
 

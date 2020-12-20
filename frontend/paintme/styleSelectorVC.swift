@@ -40,7 +40,7 @@ class styleSelectorVC: UIViewController, UINavigationControllerDelegate, UIImage
         }
 
         // print out the image size as a test
-        print(image.size)
+        //print(image.size)
         
         let waitingVC = storyboard!.instantiateViewController(withIdentifier: "waitingVC") as! waitingVC
         waitingVC.inputImage = self.image
