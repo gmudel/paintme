@@ -16,18 +16,14 @@
 		A52265022586B23100C801CA /* paintMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52265012586B23100C801CA /* paintMeVC.swift */; };
 		A522650625880BC000C801CA /* paintingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522650525880BC000C801CA /* paintingCell.swift */; };
 		A522650925880C2000C801CA /* paintingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522650825880C2000C801CA /* paintingTableVC.swift */; };
-		A54C7C73258ED06C00CD43F9 /* paintme_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A54C7C72258ED06C00CD43F9 /* paintme_icon.png */; };
 		A5FC7996258D6CD00031B509 /* styleSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC7995258D6CD00031B509 /* styleSelectorVC.swift */; };
 		A5FC799B258D7CA10031B509 /* artistTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC799A258D7CA10031B509 /* artistTableVC.swift */; };
 		A5FC799E258D7EAA0031B509 /* artistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC799D258D7EAA0031B509 /* artistCell.swift */; };
 		A5FC79A1258D9AC40031B509 /* waitingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC79A0258D9AC40031B509 /* waitingVC.swift */; };
-		A5FC79A8258DB09B0031B509 /* watercolour-4117017_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79A6258DB09B0031B509 /* watercolour-4117017_1280.png */; };
-		A5FC79A9258DB09B0031B509 /* watercolour-4116932_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79A7258DB09B0031B509 /* watercolour-4116932_1280.png */; };
 		A5FC79AC258DB27F0031B509 /* blue_line.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79AB258DB27F0031B509 /* blue_line.png */; };
 		A5FC79B1258DB28C0031B509 /* teal_line.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79AE258DB28C0031B509 /* teal_line.png */; };
 		A5FC79B2258DB28C0031B509 /* pink_line.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79AF258DB28C0031B509 /* pink_line.png */; };
 		A5FC79B3258DB28C0031B509 /* purple_line.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79B0258DB28C0031B509 /* purple_line.png */; };
-		A5FC79B8258DB3D80031B509 /* brush-307607_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79B7258DB3D80031B509 /* brush-307607_1280.png */; };
 		A5FC79BB258DB55C0031B509 /* watercolour-4117519_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC79BA258DB55B0031B509 /* watercolour-4117519_1280.png */; };
 /* End PBXBuildFile section */
 
@@ -44,18 +40,14 @@
 		A52265012586B23100C801CA /* paintMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paintMeVC.swift; sourceTree = "<group>"; };
 		A522650525880BC000C801CA /* paintingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paintingCell.swift; sourceTree = "<group>"; };
 		A522650825880C2000C801CA /* paintingTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paintingTableVC.swift; sourceTree = "<group>"; };
-		A54C7C72258ED06C00CD43F9 /* paintme_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = paintme_icon.png; path = Assets.xcassets/paintme_icon.png; sourceTree = "<group>"; };
 		A5FC7995258D6CD00031B509 /* styleSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = styleSelectorVC.swift; sourceTree = "<group>"; };
 		A5FC799A258D7CA10031B509 /* artistTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artistTableVC.swift; sourceTree = "<group>"; };
 		A5FC799D258D7EAA0031B509 /* artistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artistCell.swift; sourceTree = "<group>"; };
 		A5FC79A0258D9AC40031B509 /* waitingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waitingVC.swift; sourceTree = "<group>"; };
-		A5FC79A6258DB09B0031B509 /* watercolour-4117017_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "watercolour-4117017_1280.png"; path = "Assets.xcassets/watercolour-4117017_1280.png"; sourceTree = "<group>"; };
-		A5FC79A7258DB09B0031B509 /* watercolour-4116932_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "watercolour-4116932_1280.png"; path = "Assets.xcassets/watercolour-4116932_1280.png"; sourceTree = "<group>"; };
 		A5FC79AB258DB27F0031B509 /* blue_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_line.png; path = Assets.xcassets/blue_line.png; sourceTree = "<group>"; };
 		A5FC79AE258DB28C0031B509 /* teal_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teal_line.png; path = Assets.xcassets/teal_line.png; sourceTree = "<group>"; };
 		A5FC79AF258DB28C0031B509 /* pink_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pink_line.png; path = Assets.xcassets/pink_line.png; sourceTree = "<group>"; };
 		A5FC79B0258DB28C0031B509 /* purple_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple_line.png; path = Assets.xcassets/purple_line.png; sourceTree = "<group>"; };
-		A5FC79B7258DB3D80031B509 /* brush-307607_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brush-307607_1280.png"; path = "Assets.xcassets/brush-307607_1280.png"; sourceTree = "<group>"; };
 		A5FC79BA258DB55B0031B509 /* watercolour-4117519_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "watercolour-4117519_1280.png"; path = "Assets.xcassets/watercolour-4117519_1280.png"; sourceTree = "<group>"; };
 		FF47F53664381D42FB7A9918 /* Pods-paintme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paintme.release.xcconfig"; path = "Target Support Files/Pods-paintme/Pods-paintme.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,19 +101,15 @@
 		A52264EA2586ADE000C801CA /* paintme */ = {
 			isa = PBXGroup;
 			children = (
-				A5FC79B7258DB3D80031B509 /* brush-307607_1280.png */,
 				A52264EB2586ADE000C801CA /* AppDelegate.swift */,
 				A52264ED2586ADE000C801CA /* SceneDelegate.swift */,
 				A52264F12586ADE000C801CA /* Main.storyboard */,
 				A52264F42586ADE300C801CA /* Assets.xcassets */,
-				A54C7C72258ED06C00CD43F9 /* paintme_icon.png */,
 				A5FC79BA258DB55B0031B509 /* watercolour-4117519_1280.png */,
 				A5FC79AF258DB28C0031B509 /* pink_line.png */,
 				A5FC79AB258DB27F0031B509 /* blue_line.png */,
 				A5FC79AE258DB28C0031B509 /* teal_line.png */,
 				A5FC79B0258DB28C0031B509 /* purple_line.png */,
-				A5FC79A7258DB09B0031B509 /* watercolour-4116932_1280.png */,
-				A5FC79A6258DB09B0031B509 /* watercolour-4117017_1280.png */,
 				A52264F62586ADE300C801CA /* LaunchScreen.storyboard */,
 				A52264F92586ADE300C801CA /* Info.plist */,
 			);
@@ -199,12 +187,8 @@
 				A5FC79B2258DB28C0031B509 /* pink_line.png in Resources */,
 				A5FC79B3258DB28C0031B509 /* purple_line.png in Resources */,
 				A52264F52586ADE300C801CA /* Assets.xcassets in Resources */,
-				A5FC79B8258DB3D80031B509 /* brush-307607_1280.png in Resources */,
-				A54C7C73258ED06C00CD43F9 /* paintme_icon.png in Resources */,
-				A5FC79A8258DB09B0031B509 /* watercolour-4117017_1280.png in Resources */,
 				A5FC79AC258DB27F0031B509 /* blue_line.png in Resources */,
 				A5FC79B1258DB28C0031B509 /* teal_line.png in Resources */,
-				A5FC79A9258DB09B0031B509 /* watercolour-4116932_1280.png in Resources */,
 				A52264F32586ADE000C801CA /* Main.storyboard in Resources */,
 				A5FC79BB258DB55C0031B509 /* watercolour-4117519_1280.png in Resources */,
 			);
